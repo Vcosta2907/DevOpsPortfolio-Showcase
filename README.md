@@ -34,27 +34,17 @@ Integração com Prometheus, Loki, Jaeger e Grafana.
 AKS (Azure), EKS (AWS), OKE (Oracle), GKE (Google), On-Prem.
 
 🚀 Visão da Arquitetura da Solução
-┌──────────────────────────┐
-│    Repositório Git       │
-│  (código do cliente)     │
-└─────────────┬────────────┘
-              │ push
-              ▼
-┌──────────────────────────┐
-│   GitHub Actions CI/CD   │
-│   Pipeline Universal     │
-└─────────────┬────────────┘
-     Build    │    Deploy
-              ▼
-┌──────────────────────────┐
-│  Docker Build + Push     │
-│  Docker Hub / Registry   │
-└──────────────────────────┘
-              ▼
-┌──────────────────────────┐
-│   Deploy no Kubernetes   │
-│  (kind / AKS / EKS / OKE)│
-└──────────────────────────┘
+Repositório Git (cliente)
+           │
+           ▼
+GitHub Actions – CI/CD
+           │
+   ┌───────┴────────┐
+   │                │
+Build Docker     Deploy Kubernetes
+   │                │
+Docker Hub      kind / AKS / EKS / OKE
+
 
 
 Essa é a arquitetura base que aplico em cada projeto — adaptada ao ambiente do cliente.
