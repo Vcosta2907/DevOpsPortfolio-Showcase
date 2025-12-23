@@ -115,8 +115,8 @@ O diferencial
 
 🧠 Visão da Arquitetura da Solução
 
-Arquitetura base utilizada nos projetos, adaptada ao ambiente do cliente:
-'''
+'''Arquitetura base utilizada nos projetos, adaptada ao ambiente do cliente:
+
      │  push
      ▼
 [ GitHub Actions CI/CD ]
@@ -125,8 +125,7 @@ Arquitetura base utilizada nos projetos, adaptada ao ambiente do cliente:
 [ Build Docker ]   [ Push Image ]   [ Deploy to K8s ]
      │                                  │
      ▼                                  ▼
-[ Docker Registry ]              [ AKS / EKS / OKE / kind ]
-'''
+[ Docker Registry ]              [ AKS / EKS / OKE / kind ]'''
 
 
 Essa arquitetura garante:
